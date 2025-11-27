@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "fourway-fusion",
+  "version-string": "0.1.0",
+  "builtin-baseline": "2960d7d80e8d09c84ae8abf15c12196c2ca7d39a",
+  "dependencies": [
+    {
+      "name": "ffmpeg",
+      "default-features": true,
+      "features": []
+    }
+  ]
+}
