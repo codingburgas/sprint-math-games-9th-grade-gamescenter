@@ -17,11 +17,11 @@ For development:
   </a>
 
 <a href="https://www.dev-cpp.com/">
-    <img src="[https://images.seeklogo.com/logo-png/20/1/dev-c-logo-png_seeklogo-202589.png](https://imgs.search.brave.com/BYp76xHqiIWWpXEdqQtWmB9KMaBhYsE6D1wYPoNtn_k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc2Vla2xvZ28u/Y29tL2xvZ28tcG5n/LzIwLzEvZGV2LWMt/bG9nby1wbmdfc2Vl/a2xvZ28tMjAyNTg5/LnBuZw)" width="48px"/>
+    <img src="https://imgs.search.brave.com/2uNqjrnl-erzAMIvQk3uUwQJrM88TjnBcHrBdX1TUJQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hLmZz/ZG4uY29tL2FsbHVy/YS9wL2Rldi1jcHAv/aWNvbj8xNjUyMzEx/NTk3" width="48px"/>
   </a>
 
 <a href="https://visualstudio.microsoft.com/">
-    <img src="[https://imgs.search.brave.com/EXzdpz0XLJitUFonBapiqMB0r1B_iMiVjlD3DOE--cU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/cy13b3JsZC5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjUv/MDQvVmlzdWFsLVN0/dWRpby1Mb2dvLTUw/MHgyODEucG5n](https://imgs.search.brave.com/qNckfQCxHSaFOaQo0q7sVrsK98N-uOeozgjKYCdV6oE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/ZGl4LmNvbS9sb2dv/LzU1NTE5Mi5qcGc)" alt="Visual Studio logo" width="48px"/>
+    <img src="https://imgs.search.brave.com/EXzdpz0XLJitUFonBapiqMB0r1B_iMiVjlD3DOE--cU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/cy13b3JsZC5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjUv/MDQvVmlzdWFsLVN0/dWRpby1Mb2dvLTUw/MHgyODEucG5n" alt="Visual Studio logo" width="48px"/>
   </a>
 </p>
 
@@ -63,4 +63,5 @@ Front-end Developer – Nikola Dimitrov
 Back-end Developer – Vasil Zarakyn </li>
 <li>
 Designer – Presyn Tenev </li> </ul>
+
 
