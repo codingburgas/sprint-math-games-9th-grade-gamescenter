@@ -81,6 +81,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>$(SolutionDir)DAL;$(SolutionDir)BLL;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)..\raylib\lib;$(LibraryPath)</LibraryPath>
+    <raylib_LibraryType>StaticMonolithRelease</raylib_LibraryType>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>$(SolutionDir)DAL;$(SolutionDir)BLL;$(IncludePath)</IncludePath>
