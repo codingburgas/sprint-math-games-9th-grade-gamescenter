@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="math_race/math_race.vcxproj" />
+  <Project Path="GamesCenter/GamesCenter.vcxproj" />
 </Solution>
