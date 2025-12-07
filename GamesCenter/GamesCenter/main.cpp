@@ -19,14 +19,14 @@ void clearScreen() {
 }
 
 void drawHangman(int wrongGuesses) {
-    cout << "\n  _____ \n";
-    cout << "  |   | \n";
+    cout << "\n                _____ \n";
+    cout << "                |   | \n";
 
-    if (wrongGuesses >= 1) cout << "  |   O \n";
-    else cout << "  |     \n";
+    if (wrongGuesses >= 1) cout << "                |   O \n";
+    else cout << "                |     \n";
 
     if (wrongGuesses >= 2) {
-        cout << "  |  ";
+        cout << "                |  ";
         if (wrongGuesses >= 3) cout << "/";
         else cout << " ";
         cout << "|";
@@ -34,24 +34,24 @@ void drawHangman(int wrongGuesses) {
         else cout << "  \n";
     }
     else {
-        cout << "  |     \n";
+        cout << "                |     \n";
     }
 
     if (wrongGuesses >= 5) {
-        cout << "  |  / ";
+        cout << "                |  / ";
         if (wrongGuesses >= 6) cout << "\\ \n";
         else cout << "  \n";
     }
     else {
-        cout << "  |     \n";
+        cout << "                |     \n";
     }
 
-    cout << "  |     \n";
-    cout << "__|__   \n\n";
+    cout << "                |     \n";
+    cout << "              __|__   \n\n";
 }
 
 void displayWord(string word, vector<char> guessedLetters) {
-    cout << "\nWord: ";
+    cout << "\n                Word: ";
     for (int i = 0; i < word.length(); i++) {
         bool found = false;
         for (int j = 0; j < guessedLetters.size(); j++) {
@@ -110,25 +110,25 @@ void playGame(string word) {
         displayWord(word, guessedLetters);
 
         if (checkWin(word, guessedLetters)) {
-            cout << "🎉 Congratulations! You won!\n";
-            cout << "The word was: " << word << "\n";
+            cout << "                🎉 Congratulations! You won!\n";
+            cout << "                The word was: " << word << "\n";
             return;
         }
 
-        cout << "Guessed letters: ";
+        cout << "                Guessed letters: ";
         for (int i = 0; i < guessedLetters.size(); i++) {
             cout << guessedLetters[i] << " ";
         }
         cout << "\n";
 
-        cout << "Wrong guesses: " << wrongGuesses << "/" << maxWrong << "\n";
-        cout << "Enter a letter: ";
+        cout << "                Wrong guesses: " << wrongGuesses << "/" << maxWrong << "\n";
+        cout << "                Enter a letter: ";
 
         char guess;
         cin >> guess;
 
         if (!isValidLetter(guess)) {
-            cout << "\nPlease enter a valid letter (a-z)!\n";
+            cout << "\n                Please enter a valid letter (a-z)!\n";
             continue;
         }
 
@@ -137,7 +137,7 @@ void playGame(string word) {
         }
 
         if (alreadyGuessed(guess, guessedLetters)) {
-            cout << "\nYou already guessed that letter! Try again.\n";
+            cout << "\n                You already guessed that letter! Try again.\n";
             continue;
         }
 
@@ -152,18 +152,18 @@ void playGame(string word) {
         }
 
         if (correct) {
-            cout << "\n✓ Correct!\n";
+            cout << "\n                ✓ Correct!\n";
         }
         else {
-            cout << "\n✗ Wrong!\n";
+            cout << "\n                ✗ Wrong!\n";
             wrongGuesses++;
         }
     }
 
     if (wrongGuesses >= maxWrong) {
         drawHangman(wrongGuesses);
-        cout << "\n💀 Game Over! You've been hanged!\n";
-        cout << "The word was: " << word << "\n";
+        cout << "\n                💀 Game Over! You've been hanged!\n";
+        cout << "                The word was: " << word << "\n";
     }
 }
 
@@ -175,11 +175,10 @@ void singleplayerMode() {
     while (playAgain == 'y' || playAgain == 'Y') {
         string word = words[rand() % words.size()];
 
-        cout << "\n========== SINGLEPLAYER MODE ==========\n";
-        cout << "The computer has chosen a word!\n";
-        cout << "Score - Wins: " << gamesWon << " | Losses: " << gamesLost << "\n";
+        cout << "\n                ========= SINGLEPLAYER MODE =========\n";
+        cout << "                The computer has chosen a word!\n";
+        cout << "                Score - Wins: " << gamesWon << " | Losses: " << gamesLost << "\n";
 
-        int oldWrong = 0;
         vector<char> guessedLetters;
         int wrongGuesses = 0;
         int maxWrong = 6;
@@ -189,26 +188,26 @@ void singleplayerMode() {
             displayWord(word, guessedLetters);
 
             if (checkWin(word, guessedLetters)) {
-                cout << "🎉 Congratulations! You won!\n";
-                cout << "The word was: " << word << "\n";
+                cout << "                🎉 Congratulations! You won!\n";
+                cout << "                The word was: " << word << "\n";
                 gamesWon++;
                 break;
             }
 
-            cout << "Guessed letters: ";
+            cout << "                Guessed letters: ";
             for (int i = 0; i < guessedLetters.size(); i++) {
                 cout << guessedLetters[i] << " ";
             }
             cout << "\n";
 
-            cout << "Wrong guesses: " << wrongGuesses << "/" << maxWrong << "\n";
-            cout << "Enter a letter: ";
+            cout << "                Wrong guesses: " << wrongGuesses << "/" << maxWrong << "\n";
+            cout << "                Enter a letter: ";
 
             char guess;
             cin >> guess;
 
             if (!isValidLetter(guess)) {
-                cout << "\nPlease enter a valid letter (a-z)!\n";
+                cout << "\n                Please enter a valid letter (a-z)!\n";
                 continue;
             }
 
@@ -217,7 +216,7 @@ void singleplayerMode() {
             }
 
             if (alreadyGuessed(guess, guessedLetters)) {
-                cout << "\nYou already guessed that letter! Try again.\n";
+                cout << "\n                You already guessed that letter! Try again.\n";
                 continue;
             }
 
@@ -232,37 +231,37 @@ void singleplayerMode() {
             }
 
             if (correct) {
-                cout << "\n✓ Correct!\n";
+                cout << "\n                ✓ Correct!\n";
             }
             else {
-                cout << "\n✗ Wrong!\n";
+                cout << "\n                ✗ Wrong!\n";
                 wrongGuesses++;
             }
         }
 
         if (wrongGuesses >= maxWrong) {
             drawHangman(wrongGuesses);
-            cout << "\n💀 Game Over! You've been hanged!\n";
-            cout << "The word was: " << word << "\n";
+            cout << "\n                💀 Game Over! You've been hanged!\n";
+            cout << "                The word was: " << word << "\n";
             gamesLost++;
         }
 
-        cout << "\nPlay again? (y/n): ";
+        cout << "\n                Play again? (y/n): ";
         cin >> playAgain;
     }
 
-    cout << "\n========== FINAL SCORE ==========\n";
-    cout << "Games Won: " << gamesWon << "\n";
-    cout << "Games Lost: " << gamesLost << "\n";
+    cout << "\n                ========= FINAL SCORE =========\n";
+    cout << "                Games Won: " << gamesWon << "\n";
+    cout << "                Games Lost: " << gamesLost << "\n";
 }
 
 void multiplayerMode() {
     char playAgain = 'y';
 
     while (playAgain == 'y' || playAgain == 'Y') {
-        cout << "\n========== MULTIPLAYER MODE ==========\n";
-        cout << "Player 1: Enter a word for Player 2 to guess\n";
-        cout << "Word: ";
+        cout << "\n                ========= MULTIPLAYER MODE =========\n";
+        cout << "                Player 1: Enter a word for Player 2 to guess\n";
+        cout << "                Word: ";
 
         string word;
         cin >> word;
@@ -275,28 +274,29 @@ void multiplayerMode() {
 
         clearScreen();
 
-        cout << "\n========== MULTIPLAYER MODE ==========\n";
-        cout << "Player 2: Try to guess the word!\n";
+        cout << "\n                ========= MULTIPLAYER MODE =========\n";
+        cout << "                Player 2: Try to guess the word!\n";
 
         playGame(word);
 
-        cout << "\nPlay again? (y/n): ";
+        cout << "\n                Play again? (y/n): ";
         cin >> playAgain;
     }
 }
 
 void showMenu() {
     cout << "\n";
-    cout << "╔════════════════════════════════════╗\n";
-    cout << "║        HANGMAN GAME MENU          ║\n";
-    cout << "╔════════════════════════════════════╗\n";
-    cout << "║                                    ║\n";
-    cout << "║  1. Singleplayer                   ║\n";
-    cout << "║  2. Multiplayer                    ║\n";
-    cout << "║  3. Exit                           ║\n";
-    cout << "║                                    ║\n";
-    cout << "╚════════════════════════════════════╝\n";
-    cout << "\nEnter your choice: ";
+    cout << "                ╔════════════════════════════════════╗\n";
+    cout << "                ║        HANGMAN GAME MENU           ║\n";
+    cout << "                ╔════════════════════════════════════╗\n";
+    cout << "                ║                                    ║\n";
+    cout << "                ║  1. Singleplayer                   ║\n";
+    cout << "                ║  2. Multiplayer                    ║\n";
+    cout << "                ║  3. Exit                           ║\n";
+    cout << "                ║                                    ║\n";
+    cout << "                ╚════════════════════════════════════╝\n";
+    cout << "\n";
+    cout << "                Enter your choice: ";
 }
 
 int main() {
@@ -315,11 +315,11 @@ int main() {
             multiplayerMode();
         }
         else if (choice == 3) {
-            cout << "\nThanks for playing! Goodbye!\n";
+            cout << "\n                Thanks for playing! Goodbye!\n";
             break;
         }
         else {
-            cout << "\nInvalid choice! Please enter 1, 2, or 3.\n";
+            cout << "\n                Invalid choice! Please enter 1, 2, or 3.\n";
         }
     }
 
