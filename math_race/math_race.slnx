@@ -3,7 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="BLL/BLL.vcxproj" />
-  <Project Path="DAL/DAL.vcxproj" />
-  <Project Path="PL/PL.vcxproj" />
+  <Project Path="math_race/math_race.vcxproj" />
 </Solution>
